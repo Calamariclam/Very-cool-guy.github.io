@@ -1064,15 +1064,15 @@
                 if(this.isDisabled){
                     this.r = BLOCKING_RADIUS_MIN
                 } else {
-                    this.r = BLOCKING_RADIUS_MAX + (BLOCKING_RADIUS_MIN - BLOCKING_RADIUS_MAX) * Math.max(0, BLOCKING_PROJECTILE_LIMIT - this.ballsHitCount)
+                    this.r = BLOCKING_RADIUS_MIN + (BLOCKING_RADIUS_MAX - BLOCKING_RADIUS_MIN) * Math.max(0, BLOCKING_PROJECTILE_LIMIT - this.ballsHitCount)
                 }
             }
 
             // Wall collisions (top and bottom)
-            if (this.y + this.r <= 0) {
+            if (this.y - this.r <= 0) {
                 this.y = this.r
                 this.vy *= -1
-            } else if (this.y - this.r >= VIRTUAL_HEIGHT) {
+            } else if (this.y + this.r >= VIRTUAL_HEIGHT) {
                 this.y = VIRTUAL_HEIGHT - this.r
                 this.vy *= -1
             }
