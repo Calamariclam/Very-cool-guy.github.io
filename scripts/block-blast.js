@@ -324,7 +324,7 @@
     })
 
     const keys = {}
-    const releasedKeys = {}
+    let releasedKeys = {}
     window.addEventListener('keydown', (e) => {
         keys[e.key.toLowerCase()] = true // Use toLowerCase for consistent key checking
     })
