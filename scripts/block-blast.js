@@ -98,7 +98,7 @@
         BLOCKING_BLOCK_WEIGHT
 
     /* --- BUTTON --- */
-    function button(x, y, w, h, text, operation, hotKey){
+    function button(x, y, w, h, text, operation, myKey){
         this.x = x
         this.y = y
         this.w = w
@@ -106,7 +106,7 @@
         this.text = text
         this.operation = operation
         this.isHovering = false
-        this.key = hotKey
+        this.key = myKey
 
         this.update = () => {
             // Check if the mouse is inside the button's boundaries
