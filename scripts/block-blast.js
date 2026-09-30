@@ -772,6 +772,7 @@
                         this.y + this.h / 2,
                         BOMB_RADIUS,
                         'bomb',
+                        BALL_SPEED,
                         true,
                     )
                     bomb.vx = PROJECTILE_SPEED * Math.cos(bombAngle)
