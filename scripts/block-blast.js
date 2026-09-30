@@ -111,10 +111,10 @@
         this.update() = {
             // Check if the mouse is inside the button's boundaries
             this.isHovering =
-                mousePosition.x >= this.x &&
+                (mousePosition.x >= this.x &&
                 mousePosition.x <= this.x + this.w &&
                 mousePosition.y >= this.y &&
-                mousePosition.y <= this.y + this.h
+                mousePosition.y <= this.y + this.h)
             if(this.key !== undefined && keys[this.key]){
                 this.isHovering = true
             }
