@@ -326,6 +326,11 @@
     const keys = {}
     let releasedKeys = {}
     window.addEventListener('keydown', (e) => {
+        switch(e.code){
+            case "ArrowUp": case "ArrowDown": case "ArrowLeft": case "ArrowRight":
+            case "Space": e.preventDefault() break
+            default: break // do not block other keys
+        }//stole this from stack overflow hope this works
         keys[e.key.toLowerCase()] = true // Use toLowerCase for consistent key checking
     })
     window.addEventListener('keyup', (e) => {
