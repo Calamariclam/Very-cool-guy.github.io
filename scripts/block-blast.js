@@ -890,7 +890,6 @@
                         this.y + this.h / 2,
                         PINK_RADIUS,
                         'pink',
-                        PINK_SPEED
                     )
                     pink.vx = PINK_SPEED * Math.cos(angle)
                     pink.vy = PINK_SPEED * Math.sin(angle)
@@ -1682,7 +1681,7 @@
             275,
         )
         ctx.textAlign = 'left'
-        ctx.fillText('Last updated: June 23, 2026', 20, VIRTUAL_HEIGHT - 30)
+        ctx.fillText('Last updated: September 29, 2026', 20, VIRTUAL_HEIGHT - 30)
 
 
         // Button
