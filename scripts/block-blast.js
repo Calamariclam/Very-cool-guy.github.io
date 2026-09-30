@@ -772,7 +772,7 @@
                         this.y + this.h / 2,
                         BOMB_RADIUS,
                         'bomb',
-                        BALL_SPEED,
+                        PROJECTILE_SPEED,
                         true,
                     )
                     bomb.vx = PROJECTILE_SPEED * Math.cos(bombAngle)
@@ -806,6 +806,7 @@
                             this.y + this.h / 2,
                             hittingBall.r,
                             hittingBall.type,
+                            hittingBall.speed,
                             true,
                         )
                         mitosisBall.vx = BALL_SPEED * Math.cos(mitosisAngle)
@@ -889,6 +890,7 @@
                         this.y + this.h / 2,
                         PINK_RADIUS,
                         'pink',
+                        PINK_SPEED
                     )
                     pink.vx = PINK_SPEED * Math.cos(angle)
                     pink.vy = PINK_SPEED * Math.sin(angle)
@@ -902,8 +904,8 @@
                         this.y + this.h / 2,
                         BLOCKING_RADIUS_MIN,
                         'blocking',
-                        true,
-                        BLOCKING_SPEED
+                        BLOCKING_SPEED,
+                        true
                     )
                     blockingBall.vx = BLOCKING_SPEED * Math.cos(blockingAngle)
                     blockingBall.vy = BLOCKING_SPEED * Math.sin(blockingAngle)
