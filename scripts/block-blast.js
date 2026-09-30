@@ -98,6 +98,11 @@
         BLOCKING_BLOCK_WEIGHT
 
     /* --- BUTTON --- */
+    function hotkey(key, effect){
+        if(releasedKeys[key]){
+            effect()
+        }
+    }
     function button(x, y, w, h, text, operation, myKey){
         this.x = x
         this.y = y
@@ -226,12 +231,6 @@
             ? 'Resume'
             : 'Pause'
         lastTime = performance.now()
-    }
-
-    function hotkey(key, effect){
-        if(releasedKeys[key]){
-            effect()
-        }
     }
 
     // Function to generate angles that are not too horizontal
