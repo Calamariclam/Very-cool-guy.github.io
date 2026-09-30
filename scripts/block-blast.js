@@ -958,7 +958,7 @@
             }
 
             // Normal and Bomb ball collision action
-            if (ball.type !== 'projectile' && ball.type !== 'diamond' && ball.type !== 'pink' && !ball.isDisabled) {
+            if (ball.type !== 'projectile' && ball.type !== 'diamond' && ball.type !== 'pink' && ball.type !== 'blocking' && !ball.isDisabled) {
                 if (ball.type === 'bomb' && this.type !== 'mitosis') {
                     // Bomb explosion on impact
                     const bombCenterX = ball.x
