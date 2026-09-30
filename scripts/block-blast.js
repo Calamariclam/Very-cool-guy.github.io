@@ -1064,7 +1064,7 @@
                 if(this.isDisabled){
                     this.r = BLOCKING_RADIUS_MIN
                 } else {
-                    this.r = BLOCKING_RADIUS_MIN + (BLOCKING_RADIUS_MAX - BLOCKING_RADIUS_MIN) * Math.max(0, BLOCKING_PROJECTILE_LIMIT - this.ballsHitCount)
+                    this.r = BLOCKING_RADIUS_MIN + (BLOCKING_RADIUS_MAX - BLOCKING_RADIUS_MIN) * Math.max(0, BLOCKING_PROJECTILE_LIMIT - this.ballsHitCount) / BLOCKING_PROJECTILE_LIMIT
                 }
             }
 
