@@ -129,7 +129,7 @@
                 this.operation()
             }
             if(this.key !== undefined){
-                hotKey(this.key, this.operation)
+                hotkey(this.key, this.operation)
             }
         }
         this.display = () => {
