@@ -159,9 +159,9 @@
 
     /* --- GAME STATE VARIABLES --- */
     // const menuButton = { x: 500, y: 350, w: 200, h: 60, isHovering: false }
-    let menuButton = new button(500, 350, 200, 60, 'Start Game', reset, 32) //32 is the key code for space
-    let resumeButton = new button(500 - 110, 350, 200, 60, 'Cancel', resume, 32)
-    let resetButton = new button(500 + 110, 350, 200, 60, 'Restart', reset, 13) //13 is the key code for enter
+    let menuButton = new button(500, 350, 200, 60, 'Start Game', reset, " ")
+    let resumeButton = new button(500 - 110, 350, 200, 60, 'Cancel', resume, " ")
+    let resetButton = new button(500 + 110, 350, 200, 60, 'Restart', reset, "Enter")
     let currentScene = GAME_SCENE_NAME
     let livesLostCount = 0
     let currentScore = 0
@@ -1231,7 +1231,7 @@
                     updateText(dt)
                 }
                 if(!isGameOver){
-                    hotkey(32, togglePause)
+                    hotkey(' ', togglePause)
                 } else{
                     hotkey('r', reset)
                 }
@@ -1266,8 +1266,8 @@
 
         // Paddle movement
         paddle.dy = 0
-        if (keys['w'] || keys[38]) paddle.dy = -PADDLE_SPEED //38 is up key
-        if (keys['s'] || keys[40]) paddle.dy = PADDLE_SPEED //40 is down key
+        if (keys['w'] || keys["ArrowUp"]) paddle.dy = -PADDLE_SPEED 
+        if (keys['s'] || keys["ArrowDown"]) paddle.dy = PADDLE_SPEED
 
         paddle.y += paddle.dy * dt
         // Clamp paddle position within vertical bounds
