@@ -108,7 +108,7 @@
         this.isHovering = false
         this.key = hotKey
 
-        this.update() = {
+        this.update = () => {
             // Check if the mouse is inside the button's boundaries
             this.isHovering =
                 (mousePosition.x >= this.x &&
@@ -127,7 +127,7 @@
                 hotKey(this.key, this.operation)
             }
         }
-        this.display() = {
+        this.display = () => {
             // Button
             const btnColor = this.isHovering ? COLORS.WHITE : COLORS.WHITE_D
             drawRoundRect(
