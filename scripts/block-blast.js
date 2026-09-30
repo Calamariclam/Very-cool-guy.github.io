@@ -16,7 +16,7 @@
     const EXPLODE_BLOCK_RADIUS = 80
     const MITOSIS_BALL_COUNT = 1 // Number of balls spawned by a mitosis block
     const PIERCING_BLOCK_LIMIT = 3 // Number of blocks a piercing ball can break
-    const BLOCKING_PROJECTILE_LIMIT = 5 // Number of projectiles a blocking ball can break
+    const BLOCKING_PROJECTILE_LIMIT = 8 // Number of projectiles a blocking ball can break
     /* --- PARTICLE SETTINGS --- */
     const NUM_BLOCK_BREAK_PARTICLES_PER_AXIS = 3 // Total particles is this value squared
     const NUM_EXPLOSION_PARTICLES = 25
@@ -42,9 +42,9 @@
     const DIAMOND_DAMAGE = 20 // Amount of additional paddle height given by diamonds
     const PINK_RADIUS = 8
     const PINK_SPEED = 240
-    const BLOCKING_RADIUS_MAX = 24
+    const BLOCKING_RADIUS_MAX = 40
     const BLOCKING_RADIUS_MIN = 8
-    const BLOCKING_SPEED = 240
+    const BLOCKING_SPEED = 190
 
     /* --- COLORS --- */
     const COLORS = {
