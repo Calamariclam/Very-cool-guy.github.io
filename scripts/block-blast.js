@@ -161,7 +161,7 @@
     // const menuButton = { x: 500, y: 350, w: 200, h: 60, isHovering: false }
     let menuButton = new button(500, 350, 200, 60, 'Start Game', reset, " ")
     let resumeButton = new button(500 - 110, 350, 200, 60, 'Cancel', resume, " ")
-    let resetButton = new button(500 + 110, 350, 200, 60, 'Restart', reset, 'Enter')
+    let resetButton = new button(500 + 110, 350, 200, 60, 'Restart', reset, 'enter')
     let currentScene = GAME_SCENE_NAME
     let livesLostCount = 0
     let currentScore = 0
@@ -1268,8 +1268,8 @@
 
         // Paddle movement
         paddle.dy = 0
-        if (keys['w'] || keys['ArrowUp']) paddle.dy = -PADDLE_SPEED 
-        if (keys['s'] || keys['ArrowDown']) paddle.dy = PADDLE_SPEED
+        if (keys['w'] || keys['arrowup']) paddle.dy = -PADDLE_SPEED 
+        if (keys['s'] || keys['arrowdown']) paddle.dy = PADDLE_SPEED
 
         paddle.y += paddle.dy * dt
         // Clamp paddle position within vertical bounds
