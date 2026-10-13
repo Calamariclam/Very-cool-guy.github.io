@@ -294,15 +294,15 @@
     const VIRTUAL_WIDTH = 1200
     const VIRTUAL_HEIGHT = 600
     const MAX_WIDTH = 2000
-    const MAX_HEIGHT = 2000
-
+    const MAX_HEIGHT = 1000
+    
     let lastTime = performance.now() // Time since last frame for delta time calculation
 
     window.addEventListener('resize', resizeCanvas)
     function resizeCanvas() {
         // Find target canvas size from the available window and maximum size
-        const targetWidth = Math.min(window.innerWidth - 40, MAX_WIDTH)
-        const targetHeight = Math.min(window.innerHeight - 140, MAX_HEIGHT)
+        const targetWidth = Math.min(window.innerWidth * 0.8, MAX_WIDTH)
+        const targetHeight = Math.min(window.innerHeight * 0.8, MAX_HEIGHT)
         const targetScale = Math.min(
             targetWidth / VIRTUAL_WIDTH,
             targetHeight / VIRTUAL_HEIGHT,
@@ -1981,7 +1981,7 @@
             275,
         )
         ctx.textAlign = 'left'
-        ctx.fillText('Last updated: October 12, 2026', 20, VIRTUAL_HEIGHT - 30)
+        ctx.fillText('Last updated: October 13, 2026', 20, VIRTUAL_HEIGHT - 30)
 
 
         // Button
